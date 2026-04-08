@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Dev Burguer - Pedidos</title>
+</head>
+<body>
+    <header>
+        <h1>Dev Burguer</h1>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="form.html">Faça seu Pedido</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <section id="pedido">
+            <h2>Faça seu Pedido</h2>
+            
+            <form action="sucesso.html" method="GET">
+                
+                <p>
+                    <label for="nomeCliente">Nome do cliente:</label><br>
+                    <input type="text" id="nomeCliente" name="nome" required>
+                </p>
+
+                <p><strong>Escolha do hambúrguer:</strong></p>
+                <input type="radio" id="burguerCpp" name="hamburguer" value="Hamburgão em C++" required>
+                <label for="burguerCpp">Hamburgão em C++ - R$ 28,00</label><br>
+
+                <input type="radio" id="burguerClass" name="hamburguer" value="Class Burger">
+                <label for="burguerClass">Class Burger - R$ 32,00</label><br>
+
+                <input type="radio" id="burguerReact" name="hamburguer" value="React Veggie">
+                <label for="burguerReact">React Veggie - R$ 30,00</label><br>
+
+                <p><strong>Adicionais:</strong></p>
+                <input type="checkbox" id="addBacon" name="adicional_bacon" value="Bacon">
+                <label for="addBacon">Bacon extra (+ R$ 5,00)</label><br>
+
+                <input type="checkbox" id="addQueijo" name="adicional_queijo" value="Queijo">
+                <label for="addQueijo">Queijo extra (+ R$ 4,00)</label><br>
+
+                <input type="checkbox" id="addBatata" name="adicional_batata" value="Batata">
+                <label for="addBatata">Batata frita (+ R$ 8,00)</label><br>
+
+                <p>
+                    <label for="obs"><strong>Observações:</strong></label><br>
+                    <textarea id="obs" name="observacoes" rows="4" cols="50" placeholder="Ex: Tirar a cebola, ponto da carne..."></textarea>
+                </p>
+
+                <p>
+                    <button type="submit">Enviar Pedido</button>
+                </p>
+                
+            </form>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2026 Dev Burguer Food Truck</p>
+    </footer>
+</body>
+</html>
