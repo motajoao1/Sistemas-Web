@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev Burguer - Faça seu Pedido</title>
+    <style>
+        :root {
+            --primary: #2ecc71;
+            --dark: #2c3e50;
+            --light: #ecf0f1;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--light);
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .painel-principal {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            width: 100%;
+        }
+
+        /* Cabeçalho e Botão Voltar */
+        .header-acoes {
+            margin-bottom: 20px;
+        }
+
+        .btn-voltar {
+            display: inline-flex;
+            align-items: center;
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 600;
+            font-size: 0.9em;
+            padding: 8px 12px;
+            border-radius: 6px;
+            background-color: #f1f2f6;
+            transition: all 0.2s ease;
+        }
+
+        .btn-voltar:hover {
+            background-color: #dfe4ea;
+            transform: translateX(-2px);
+        }
+
+        h1 {
+            color: var(--dark);
+            border-bottom: 3px solid var(--primary);
+            padding-bottom: 10px;
+            margin-top: 0;
+            text-align: center;
+        }
+
+        /* Estilos do Formulário */
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        h3 {
+            color: var(--dark);
+            font-size: 1.1em;
+            margin-bottom: 12px;
+            border-bottom: 1px dashed #ccc;
+            padding-bottom: 5px;
+        }
+
+        /* Estilizando os Radio Buttons e Checkboxes */
+        .opcoes-group {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .opcao-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #34495e;
+            cursor: pointer;
+            font-weight: 500;
+        }
+
+        .opcao-item input[type="radio"],
+        .opcao-item input[type="checkbox"] {
+            cursor: pointer;
+            width: 18px;
+            height: 18px;
+            accent-color: var(--primary);
+        }
+
+        /* Estilizando o Textarea */
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-sizing: border-box;
+            font-family: inherit;
+            font-size: 1em;
+            resize: vertical;
+            min-height: 80px;
+            transition: border-color 0.3s ease;
+        }
+
+        textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(46, 204, 113, 0.2);
+        }
+
+        /*  Botão de Enviar */
+        /* Container dos Botões */
+        .botoes-acao {
+            display: flex;
+            gap: 15px;
+            /* Espaço entre os botões */
+            margin-top: 15px;
+        }
+
+        /* Estilos base compartilhados */
+        .btn-confirmar,
+        .btn-limpar {
+            flex: 1;
+            /* Faz os botões dividirem o espaço igualmente */
+            padding: 14px;
+            border-radius: 8px;
+            font-size: 1.1em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        /*  Botão Principal (Verde) */
+        .btn-confirmar {
+            background-color: var(--primary);
+            color: white;
+            border: none;
+        }
+
+        .btn-confirmar:hover {
+            background-color: #27ae60;
+            transform: translateY(-2px);
+        }
+
+        /* Botão Secundário (Limpar) */
+        .btn-limpar {
+            background-color: #f1f2f6;
+            color: var(--dark);
+            border: 1px solid #bdc3c7;
+        }
+
+        .btn-limpar:hover {
+            background-color: #e0e6ed;
+            transform: translateY(-2px);
+        }
+
+        .btn-confirmar:hover {
+            background-color: #27ae60;
+            transform: translateY(-2px);
+        }
+
+        footer {
+            margin-top: 35px;
+            padding-top: 15px;
+            border-top: 1px dashed #ccc;
+            font-size: 0.85em;
+            color: #95a5a6;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="painel-principal">
+
+        <div class="header-acoes">
+            <a href="index.html" class="btn-voltar">
+                &larr; Voltar para o Início
+            </a>
+        </div>
+
+        <h1>Faça seu Pedido</h1>
+
+        <form action="sucesso.html" method="GET">
+
+            <div class="form-group">
+                <h3>Escolha do hambúrguer:</h3>
+                <div class="opcoes-group">
+                    <label class="opcao-item">
+                        <input type="radio" name="hamburguer" value="Hamburgão em C++" required>
+                        Hamburgão em C++ - R$ 28,00
+                    </label>
+                    <label class="opcao-item">
+                        <input type="radio" name="hamburguer" value="Class Burger">
+                        Class Burger - R$ 32,00
+                    </label>
+                    <label class="opcao-item">
+                        <input type="radio" name="hamburguer" value="React Veggie">
+                        React Veggie - R$ 30,00
+                    </label>
+
+                    <label class="opcao-item">
+                        <input type="radio" name="hamburguer" value="Angular Angus">
+                        Angular Angus - R$ 38,00
+                    </label>
+                    <label class="opcao-item">
+                        <input type="radio" name="hamburguer" value="Python Picanha">
+                        Python Picanha - R$ 42,00
+                    </label>
+                    <label class="opcao-item">
+                        <input type="radio" name="hamburguer" value="Binary Bacon">
+                        Binary Bacon - R$ 35,00
+                    </label>
+                    <label class="opcao-item">
+                        <input type="radio" name="hamburguer" value="CSS Cheese">
+                        CSS Cheese - R$ 25,00
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <h3>Adicionais:</h3>
+                <div class="opcoes-group">
+                    <label class="opcao-item">
+                        <input type="checkbox" name="adicional_bacon" value="Bacon extra">
+                        Bacon extra (+ R$ 5,00)
+                    </label>
+                    <label class="opcao-item">
+                        <input type="checkbox" name="adicional_queijo" value="Queijo extra">
+                        Queijo extra (+ R$ 4,00)
+                    </label>
+                    <label class="opcao-item">
+                        <input type="checkbox" name="adicional_batata" value="Batata frita">
+                        Batata frita (+ R$ 8,00)
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <h3>Observações:</h3>
+                <textarea name="observacoes" placeholder="Ex: Tirar a cebola, ponto da carne..."></textarea>
+            </div>
+
+            <div class="botoes-acao">
+                <button type="reset" class="btn-limpar">Limpar Pedido</button>
+                <button type="submit" class="btn-confirmar">Enviar Pedido</button>
+            </div>
+
+        </form>
+
+        <footer>
+            &copy; 2026 Dev Burguer Food Truck
+        </footer>
+    </main>
+
+</body>
+
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevBurger - Menu</title>
+    <style>
+        :root {
+            --primary: #2ecc71;
+            --dark: #2c3e50;
+            --light: #ecf0f1;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--light);
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .cardapio {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            max-width: 500px;
+            width: 100%;
+        }
+
+        .header-acoes {
+            margin-bottom: 15px;
+        }
+
+        .btn-voltar {
+            display: inline-flex;
+            align-items: center;
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 600;
+            font-size: 0.9em;
+            padding: 8px 12px;
+            border-radius: 6px;
+            background-color: #f1f2f6;
+            transition: all 0.2s ease;
+        }
+
+        .btn-voltar:hover {
+            background-color: #dfe4ea;
+            transform: translateX(-2px);
+        }
+
+        h1 {
+            text-align: center;
+            color: var(--dark);
+            border-bottom: 3px solid var(--primary);
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+
+        .categoria {
+            margin-top: 20px;
+        }
+
+        .item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px dashed #ccc;
+        }
+
+        .nome-burguer {
+            font-weight: bold;
+            color: var(--dark);
+        }
+
+        .preco {
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        .descricao {
+            font-size: 0.85em;
+            color: #7f8c8d;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <main class="cardapio">
+        
+        <div class="header-acoes">
+            <a href="#" class="btn-voltar" onclick="event.preventDefault(); history.back();">
+                &larr; Voltar
+            </a>
+        </div>
+
+        <h1> { Dev: Burger } </h1>
+        
+        <section class="categoria">
+            <div class="item">
+                <div>
+                    <span class="nome-burguer">Hamburgão em C++</span>
+                    <span class="descricao">Robusto, raiz e com performance máxima.</span>
+                </div>
+                <span class="preco">R$ 28,00</span>
+            </div>
+
+            <div class="item">
+                <div>
+                    <span class="nome-burguer">Class Burger</span>
+                    <span class="descricao">A estrutura clássica que todo mundo respeita.</span>
+                </div>
+                <span class="preco">R$ 32,00</span>
+            </div>
+
+            <div class="item">
+                <div>
+                    <span class="nome-burguer">React Veggie</span>
+                    <span class="descricao">Leve, declarativo e 100% livre de carne.</span>
+                </div>
+                <span class="preco">R$ 30,00</span>
+            </div>
+
+            <div class="item">
+                <div>
+                    <span class="nome-burguer">Angular Angus</span>
+                    <span class="descricao">Completo, com bacon e cebola caramelizada.</span>
+                </div>
+                <span class="preco">R$ 38,00</span>
+            </div>
+
+            <div class="item">
+                <div>
+                    <span class="nome-burguer">Python Picanha</span>
+                    <span class="descricao">Simples de comer, sabor complexo e elegante.</span>
+                </div>
+                <span class="preco">R$ 42,00</span>
+            </div>
+
+            <div class="item">
+                <div>
+                    <span class="nome-burguer">Binary Bacon</span>
+                    <span class="descricao">Ou você ama, ou você ama (0 ou 1).</span>
+                </div>
+                <span class="preco">R$ 35,00</span>
+            </div>
+
+            <div class="item">
+                <div>
+                    <span class="nome-burguer">CSS Cheese</span>
+                    <span class="descricao">O estilo que dá o toque final ao prato.</span>
+                </div>
+                <span class="preco">R$ 25,00</span>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>
